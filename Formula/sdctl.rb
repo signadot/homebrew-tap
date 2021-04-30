@@ -10,11 +10,11 @@ class Sdctl < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://sdctl.s3-us-west-2.amazonaws.com/release/0.5.4-snapshot/signadot_0.5.4-snapshot_darwin_amd64.tar.gz"
-    sha256 "6373e712b0fd78c5b19f60c26dcf60379e5b39eec5fa0edaee0c2dc35640e617"
+    sha256 "f1187169e1b34617ff881896cb9f46ee4a1014cfb6b29e513e0ca4a107e0346e"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://sdctl.s3-us-west-2.amazonaws.com/release/0.5.4-snapshot/signadot_0.5.4-snapshot_linux_amd64.tar.gz"
-    sha256 "f55103081af1709b5b670ba551048106dfb820c4b21b7ebaed4b8e9aa823dc95"
+    sha256 "042e2658d1703e178eac2a0e4745c2d490c106e99afc4390897e2a886d021737"
   end
 
   depends_on "sshuttle"
