@@ -9,12 +9,12 @@ class Sdctl < Formula
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://sdctl.s3-us-west-2.amazonaws.com/pre-release/v0.5.4-snapshot/signadot_0.5.4-snapshot_darwin_amd64.tar.gz"
-    sha256 "c0a0f4cac6e241363ac5d7acca35a97a0fd0c465fccead60df96beeb532d057b"
+    url "https://sdctl.s3-us-west-2.amazonaws.com/release/0.5.4-snapshot/signadot_0.5.4-snapshot_darwin_amd64.tar.gz"
+    sha256 "6373e712b0fd78c5b19f60c26dcf60379e5b39eec5fa0edaee0c2dc35640e617"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://sdctl.s3-us-west-2.amazonaws.com/pre-release/v0.5.4-snapshot/signadot_0.5.4-snapshot_linux_amd64.tar.gz"
-    sha256 "2895fa3ab4155d25af30e01c4b92b87961b0a93e12576d7a10b3e030b90f39d5"
+    url "https://sdctl.s3-us-west-2.amazonaws.com/release/0.5.4-snapshot/signadot_0.5.4-snapshot_linux_amd64.tar.gz"
+    sha256 "f55103081af1709b5b670ba551048106dfb820c4b21b7ebaed4b8e9aa823dc95"
   end
 
   depends_on "sshuttle"
