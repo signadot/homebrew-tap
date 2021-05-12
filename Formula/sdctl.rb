@@ -5,16 +5,16 @@
 class Sdctl < Formula
   desc "Rapid Development in Kubernetes"
   homepage "https://signadot.com"
-  version "0.5.4-snapshot"
+  version "0.5.4"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.5.4-snapshot/signadot_0.5.4-snapshot_darwin_amd64.tar.gz"
-    sha256 "8778725d5d5f4217118b033b9a7eb7b70dae7234a59b164311c098443837c993"
+    url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.5.4/signadot_0.5.4_darwin_amd64.tar.gz"
+    sha256 "3eba31dc805778ffe972e49249b3dc4bdaf6773a98e73e99ca777160de316598"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.5.4-snapshot/signadot_0.5.4-snapshot_linux_amd64.tar.gz"
-    sha256 "cb1f318c9f3baa6c5b442b7a1826ee5b42e59d815afb30aee676eb7aa201fc98"
+    url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.5.4/signadot_0.5.4_linux_amd64.tar.gz"
+    sha256 "4e93634cb10ef914bf297204a9ed9319f0c3987c1ab1025cf9faa23a142e3aab"
   end
 
   depends_on "sshuttle"
