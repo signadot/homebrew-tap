@@ -5,20 +5,24 @@
 class Sdctl < Formula
   desc "Rapid Development in Kubernetes"
   homepage "https://signadot.com"
-  version "0.7.0"
+  version "0.6.4"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.7.0/signadot_0.7.0_darwin_amd64.tar.gz"
-    sha256 "55adc8fbab5776ca1c18830daea0290bfeb57ae2fef89b32135aaa1fbbaf21c9"
+    url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.6.4/signadot_0.6.4_darwin_amd64.tar.gz"
+    sha256 "7d88effefa5b5b8fb022160db448ba4c85873e1e305ef8c2e6167a7dc7098bf4"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.6.4/signadot_0.6.4_darwin_arm64.tar.gz"
+    sha256 "6694e8faa4c0d81eed1702a44c7a3cfcfac8fd84d8fcb1ce16371f96c8147ae2"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.7.0/signadot_0.7.0_linux_amd64.tar.gz"
-    sha256 "8692c508c4029159f5bb26928dffe023e989bed63dd25d20848b959cf403d1b8"
+    url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.6.4/signadot_0.6.4_linux_amd64.tar.gz"
+    sha256 "123dbc872f54a26ace4f1e10e8645ba1be0669fdd5a238c5876be9de5fefd035"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.7.0/signadot_0.7.0_linux_arm64.tar.gz"
-    sha256 "39001133fd880c624983121802005a473ed1bcd60408710a537297bd518977b4"
+    url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.6.4/signadot_0.6.4_linux_arm64.tar.gz"
+    sha256 "a2d73161c6abaa49613ecb7b98786f07bb8f8399217c6fe257b8959c90fb535b"
   end
 
   depends_on "sshuttle"
