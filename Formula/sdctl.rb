@@ -12,6 +12,10 @@ class Sdctl < Formula
     url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.7.0/signadot_0.7.0_darwin_amd64.tar.gz"
     sha256 "55adc8fbab5776ca1c18830daea0290bfeb57ae2fef89b32135aaa1fbbaf21c9"
   end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.7.0/signadot_0.7.0_darwin_arm64.tar.gz"
+    sha256 "b6f2ee0ee06b5945e5b080fcbabb33af6a05e0e30e2724b25a551bb44cd89666"
+  end
   if OS.linux? && Hardware::CPU.intel?
     url "https://sdctl.s3-us-west-2.amazonaws.com/release/v0.7.0/signadot_0.7.0_linux_amd64.tar.gz"
     sha256 "8692c508c4029159f5bb26928dffe023e989bed63dd25d20848b959cf403d1b8"
