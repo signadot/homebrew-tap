@@ -5,27 +5,28 @@
 class SignadotCli < Formula
   desc "Command-line interface for Signadot"
   homepage "https://signadot.com"
-  version "0.3.1"
+  version "0.3.2"
+  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v0.3.1/signadot-cli_darwin_amd64.tar.gz"
-      sha256 "8881f132c8c4dfbb567b8604a242492510e003c4facfe41210c1857a479d1b09"
+      url "https://github.com/signadot/cli/releases/download/v0.3.2/signadot-cli_darwin_amd64.tar.gz"
+      sha256 "2c9cb8d30349d9a2d07525d5f87ca85857eeda28bac483784d5e192fd0f95529"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/signadot/cli/releases/download/v0.3.1/signadot-cli_darwin_arm64.tar.gz"
-      sha256 "007ebf8e3cbc9af9c59d798ce8f2c0b64e28f3401e05b8682b3dd7d2aa95beeb"
+      url "https://github.com/signadot/cli/releases/download/v0.3.2/signadot-cli_darwin_arm64.tar.gz"
+      sha256 "9cc86d82a1b56c181ee20f264c6be803552a094bfeba17402d285451082423e6"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v0.3.1/signadot-cli_linux_amd64.tar.gz"
-      sha256 "c748c75c3837ffb91e0ea455df0ce528d18f3c8751eefaffce82bd3a71355440"
+      url "https://github.com/signadot/cli/releases/download/v0.3.2/signadot-cli_linux_amd64.tar.gz"
+      sha256 "70c77b27641c08dabef499df1649f157b283d2d1b2b5c90b4f668c9184ef3cd4"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/signadot/cli/releases/download/v0.3.1/signadot-cli_linux_arm64.tar.gz"
-      sha256 "96904faa928b53a5934b2f2e8d0c1fe6dd96c3139336421faca2d97e7ed9f9d7"
+      url "https://github.com/signadot/cli/releases/download/v0.3.2/signadot-cli_linux_arm64.tar.gz"
+      sha256 "2a684be9f03e52d748fdb267c141c0cc668849477d04a5c0f93f27f1d4ecb956"
     end
   end
 
