@@ -6,7 +6,6 @@ class SignadotCli < Formula
   desc "Command-line interface for Signadot"
   homepage "https://signadot.com"
   version "0.3.2"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
