@@ -5,31 +5,43 @@
 class SignadotCli < Formula
   desc "Command-line interface for Signadot"
   homepage "https://signadot.com"
-  version "0.3.2"
+  version "0.3.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v0.3.2/signadot-cli_darwin_amd64.tar.gz"
-      sha256 "2c9cb8d30349d9a2d07525d5f87ca85857eeda28bac483784d5e192fd0f95529"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/signadot/cli/releases/download/v0.3.2/signadot-cli_darwin_arm64.tar.gz"
-      sha256 "9cc86d82a1b56c181ee20f264c6be803552a094bfeba17402d285451082423e6"
+      url "https://github.com/signadot/cli/releases/download/v0.3.3/signadot-cli_darwin_arm64.tar.gz"
+      sha256 "f021473e41ace1745ea83d42b3b6f90b56128e2194ef4d2ee69be1beddb9e72f"
+
+      def install
+        bin.install "signadot"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/signadot/cli/releases/download/v0.3.3/signadot-cli_darwin_amd64.tar.gz"
+      sha256 "94365eda8af07fbdd523172685ba31c6e936bcb8db1777e6f2b515a5a0d5f7e6"
+
+      def install
+        bin.install "signadot"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v0.3.2/signadot-cli_linux_amd64.tar.gz"
-      sha256 "70c77b27641c08dabef499df1649f157b283d2d1b2b5c90b4f668c9184ef3cd4"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/signadot/cli/releases/download/v0.3.2/signadot-cli_linux_arm64.tar.gz"
-      sha256 "2a684be9f03e52d748fdb267c141c0cc668849477d04a5c0f93f27f1d4ecb956"
-    end
-  end
+      url "https://github.com/signadot/cli/releases/download/v0.3.3/signadot-cli_linux_arm64.tar.gz"
+      sha256 "2c1215ba997fdb890fd4b94820b3290421151aa9d5a5cfb6ffd9efb456aa7ee7"
 
-  def install
-    bin.install "signadot"
+      def install
+        bin.install "signadot"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/signadot/cli/releases/download/v0.3.3/signadot-cli_linux_amd64.tar.gz"
+      sha256 "835924c84943808052d72d52d8ee4363ed26b9e44ef343cbf26062ea4271662a"
+
+      def install
+        bin.install "signadot"
+      end
+    end
   end
 end
