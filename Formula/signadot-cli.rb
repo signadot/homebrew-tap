@@ -5,31 +5,43 @@
 class SignadotCli < Formula
   desc "Command-line interface for Signadot"
   homepage "https://signadot.com"
-  version "0.3.7"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/signadot/cli/releases/download/v0.3.7/signadot-cli_darwin_arm64.tar.gz"
-      sha256 "4ced70786df80f6f1e0c85a69e6a18c1d00dd0766c8eddd32d487661ea55a06e"
+      url "https://github.com/signadot/cli/releases/download/v0.4.0/signadot-cli_darwin_arm64.tar.gz"
+      sha256 "6c453a384a4e0ce81aeb6adb05d7171f804e62f1163a326d433180949a132b8d"
+
+      def install
+        bin.install "signadot"
+      end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v0.3.7/signadot-cli_darwin_amd64.tar.gz"
-      sha256 "c1135acfb4fdee4a7c7051e1eb6920c70127ee63e0feddc2561d49451252ffd1"
+      url "https://github.com/signadot/cli/releases/download/v0.4.0/signadot-cli_darwin_amd64.tar.gz"
+      sha256 "23ac99fa1caf7322cbbee87e8b3b965363b539fe24ba0d80ac03600ba2a7fd37"
+
+      def install
+        bin.install "signadot"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/signadot/cli/releases/download/v0.3.7/signadot-cli_linux_arm64.tar.gz"
-      sha256 "aff29e11b6361fd68263995949d8be4053ef38296c90b04461afe36c3978f1c3"
+      url "https://github.com/signadot/cli/releases/download/v0.4.0/signadot-cli_linux_arm64.tar.gz"
+      sha256 "454b23b6af08367cf1e7ec8c5ed61d75226f054120b8ef4678dc283869d57c9f"
+
+      def install
+        bin.install "signadot"
+      end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v0.3.7/signadot-cli_linux_amd64.tar.gz"
-      sha256 "ef7135e7792ecf5807c1b12ebeb4da8993a5ed3d6fb0134070919dc9d1c9f9b7"
-    end
-  end
+      url "https://github.com/signadot/cli/releases/download/v0.4.0/signadot-cli_linux_amd64.tar.gz"
+      sha256 "f5923c02d4ca300729f8586b5f7ef41a01283f011ccc4263356cacdec2c5d624"
 
-  def install
-    bin.install "signadot"
+      def install
+        bin.install "signadot"
+      end
+    end
   end
 end
