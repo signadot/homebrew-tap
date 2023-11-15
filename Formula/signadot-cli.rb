@@ -5,20 +5,20 @@
 class SignadotCli < Formula
   desc "Command-line interface for Signadot"
   homepage "https://signadot.com"
-  version "0.5.3"
+  version "0.5.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v0.5.3/signadot-cli_darwin_amd64.tar.gz"
-      sha256 "f1d5b72f5bd36191bce562a1a983906d6f2745e74068e27d7c6e0b9e9d2e0642"
+    if Hardware::CPU.arm?
+      url "https://github.com/signadot/cli/releases/download/v0.5.4/signadot-cli_darwin_arm64.tar.gz"
+      sha256 "23db6a69040f9416ef617aa4dc00a629a1ef18005ecb8378a7146ceaaf6e2886"
 
       def install
         bin.install "signadot"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/signadot/cli/releases/download/v0.5.3/signadot-cli_darwin_arm64.tar.gz"
-      sha256 "fd9fef8d0d1f18df5a10251e5d9d5a257212dc2d4ed091b6dd7a46e3a0ba4973"
+    if Hardware::CPU.intel?
+      url "https://github.com/signadot/cli/releases/download/v0.5.4/signadot-cli_darwin_amd64.tar.gz"
+      sha256 "0901e0cd3e9e8bde19927265889cd87f20eee06ae6be72c0fecb73e3ef030808"
 
       def install
         bin.install "signadot"
@@ -28,16 +28,16 @@ class SignadotCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/signadot/cli/releases/download/v0.5.3/signadot-cli_linux_arm64.tar.gz"
-      sha256 "569e6c40272e3df85211ccc3bb4066776c76e4eeb8d141eaf60e4b3672f1906c"
+      url "https://github.com/signadot/cli/releases/download/v0.5.4/signadot-cli_linux_arm64.tar.gz"
+      sha256 "1941d0195713f8116a922c9012eb5a203082d5ccdc3e8dd83ce441e0914ec406"
 
       def install
         bin.install "signadot"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v0.5.3/signadot-cli_linux_amd64.tar.gz"
-      sha256 "76b20ff7a928867071a44bcdc24346fce57df39a62335983520152b3afa6e443"
+      url "https://github.com/signadot/cli/releases/download/v0.5.4/signadot-cli_linux_amd64.tar.gz"
+      sha256 "ebb0cdf2db3a0a15212e9620b125b8d060ed0a981cca6b603740459a9f4e5f75"
 
       def install
         bin.install "signadot"
