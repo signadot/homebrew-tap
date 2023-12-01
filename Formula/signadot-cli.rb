@@ -5,43 +5,28 @@
 class SignadotCli < Formula
   desc "Command-line interface for Signadot"
   homepage "https://signadot.com"
-  version "0.5.4"
+  version "0.6.0"
+  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v0.5.4/signadot-cli_darwin_amd64.tar.gz"
-      sha256 "23f3a778bc4af3b504873eee02dbc43adee837733e8c0c236535260e51ba1cf1"
-
-      def install
-        bin.install "signadot"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/signadot/cli/releases/download/v0.5.4/signadot-cli_darwin_arm64.tar.gz"
-      sha256 "24b99a38f9f9a1781ad58d8034938342e7f9a35903b4876c88ae84cbec4a82bb"
-
-      def install
-        bin.install "signadot"
-      end
+      url "https://github.com/signadot/cli/releases/download/v0.6.0/signadot-cli_darwin_amd64.tar.gz"
+      sha256 "3c17a618e58ecc47330a2941f10d0de4fcd68fc0586c540799390af8713134b3"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/signadot/cli/releases/download/v0.5.4/signadot-cli_linux_arm64.tar.gz"
-      sha256 "f21f80ef8f9c17f408be5d2f9f21c7d54dbfab0abcff18dd714f01c62bff6ed6"
-
-      def install
-        bin.install "signadot"
-      end
+      url "https://github.com/signadot/cli/releases/download/v0.6.0/signadot-cli_linux_arm64.tar.gz"
+      sha256 "05335c3e3b394c752c8a04b5f9baf01dbb46c7e3f2b4b5b21f321df4af0001e7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v0.5.4/signadot-cli_linux_amd64.tar.gz"
-      sha256 "ecdfc20b86dfecedbb6e3cec7295076ce940e3e17a503a05b171d756db51c62b"
-
-      def install
-        bin.install "signadot"
-      end
+      url "https://github.com/signadot/cli/releases/download/v0.6.0/signadot-cli_linux_amd64.tar.gz"
+      sha256 "a14c4edd5d905a189bc79ac341beae4f650cf64d3600309f40862daefa2a9e80"
     end
+  end
+
+  def install
+    bin.install "signadot"
   end
 end
