@@ -5,41 +5,39 @@
 class SignadotCli < Formula
   desc "Command-line interface for Signadot"
   homepage "https://signadot.com"
-  version "1.4.0"
+  version "1.5.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/signadot/cli/releases/download/v1.4.0/signadot-cli_darwin_arm64.tar.gz"
-      sha256 "9f9a239c0304debd5ae1235861eed2679a0aea04435f7ba96f46783a4be0aece"
+    if Hardware::CPU.intel?
+      url "https://github.com/signadot/cli/releases/download/v1.5.0/signadot-cli_mcp_darwin_amd64.tar.gz"
+      sha256 "b87de105379d8751be997e7610fdce6f93b1dcecff37faed44ea48d948f7de02"
 
-      def install
+      define_method(:install) do
         bin.install "signadot"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v1.4.0/signadot-cli_darwin_amd64.tar.gz"
-      sha256 "3978acff3e6037161fd8801b346925db9ae3cbb17807a0913ef4cf01119ee119"
+    if Hardware::CPU.arm?
+      url "https://github.com/signadot/cli/releases/download/v1.5.0/signadot-cli_mcp_darwin_arm64.tar.gz"
+      sha256 "0ba3f5b5046a6f7f2e43b456af62685e00f6214f85ab16e898ef30cbf7dea593"
 
-      def install
+      define_method(:install) do
         bin.install "signadot"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/signadot/cli/releases/download/v1.4.0/signadot-cli_linux_arm64.tar.gz"
-      sha256 "9a5aa540c1a1f8064b14861f1f5526cba19061e1d4d6e157ac6dbd92c048d3c9"
-
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/signadot/cli/releases/download/v1.5.0/signadot-cli_mcp_linux_amd64.tar.gz"
+      sha256 "9803ca637b81b1848ec1674aecba16ce90755d2217e6e3393979e58ff2eabb6a"
+      define_method(:install) do
         bin.install "signadot"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v1.4.0/signadot-cli_linux_amd64.tar.gz"
-      sha256 "b81f034adb628a1a7f0abe2e79a452fea1d1e9d53786f3bc1bf5760ba0055546"
-
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/signadot/cli/releases/download/v1.5.0/signadot-cli_mcp_linux_arm64.tar.gz"
+      sha256 "13c8f3f1b5e51f23a23bc93124908565bdb586dd33caddd9089559d5de1fb38d"
+      define_method(:install) do
         bin.install "signadot"
       end
     end
