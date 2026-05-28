@@ -5,20 +5,20 @@
 class SignadotCli < Formula
   desc "Command-line interface for Signadot"
   homepage "https://signadot.com"
-  version "1.6.0"
+  version "1.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/signadot/cli/releases/download/v1.6.0/signadot-cli_mcp_darwin_amd64.tar.gz"
-      sha256 "512425bc61773b40a1288e7129fdd47f9ef60fd556ad609a91747e0083c08d45"
+      url "https://github.com/signadot/cli/releases/download/v1.7.0/signadot-cli_mcp_darwin_amd64.tar.gz"
+      sha256 "c5375c3cfca13daf7c3f989a4b219d612f930bcd9c3467c836345a310dbbb3da"
 
       define_method(:install) do
         bin.install "signadot"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/signadot/cli/releases/download/v1.6.0/signadot-cli_mcp_darwin_arm64.tar.gz"
-      sha256 "843b1536ae599ae700c73ba7402f1341f3b7a85d39d0f1d89824ada7c8055130"
+      url "https://github.com/signadot/cli/releases/download/v1.7.0/signadot-cli_mcp_darwin_arm64.tar.gz"
+      sha256 "9138016e90904cd17137dc43bba233fe2066d110b4a05df1070a459cf162e0a7"
 
       define_method(:install) do
         bin.install "signadot"
@@ -28,15 +28,15 @@ class SignadotCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/signadot/cli/releases/download/v1.6.0/signadot-cli_mcp_linux_amd64.tar.gz"
-      sha256 "dc033ad07bbd552823f51e9ed728c60a5a4c1505bc0ab07a8f29572e7eb650da"
+      url "https://github.com/signadot/cli/releases/download/v1.7.0/signadot-cli_mcp_linux_amd64.tar.gz"
+      sha256 "9f5bea1eff12650a39ad71bf5390f0b86f4962a634baa7a37a499936ec8292da"
       define_method(:install) do
         bin.install "signadot"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/signadot/cli/releases/download/v1.6.0/signadot-cli_mcp_linux_arm64.tar.gz"
-      sha256 "db0d94410cad7ca1d4288e1e78506b5ab56aeef54b1917e4129f9af18f40804b"
+      url "https://github.com/signadot/cli/releases/download/v1.7.0/signadot-cli_mcp_linux_arm64.tar.gz"
+      sha256 "33983083f0a37f6cbe9a01999b41cb31a319cbfc63fa12321cfb4546130ff8de"
       define_method(:install) do
         bin.install "signadot"
       end
